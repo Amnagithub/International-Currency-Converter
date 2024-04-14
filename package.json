@@ -1,0 +1,31 @@
+{
+  "name": "@amnakh/1-International-currency-converter",
+  "version": "1.0.0",
+  "description": "International-Currency_Converter",
+  "main": "index.js",
+  "type": "module",
+  "bin": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amnagithub/Internationa-Cureency-Converter.git"
+  },
+  "author": "Amnakh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amnagithub/Internationa-Cureency-Converter/issues"
+  },
+  "homepage": "https://github.com/Amnagithub/Internationa-Cureency-Converter#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.18"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  }
+}
