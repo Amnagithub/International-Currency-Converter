@@ -1,31 +1,33 @@
 #!/usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
-
+// create a currency conversion rate list in a variable
 const currency : any = {
     USD : 1,
     PKR : 277.30,
-    EUR : 1.07,
-    GBP : 1.25,
-    INR : 0.012,
-    SAR : 0.27,
-    JPY : 0.0065,
-    CAD : 0.73,
-    BHD : 2.66,
-    AED : 0.27,
+    EUR : 0.94,
+    GBP : 0.80,
+    INR : 83.61,
+    SAR : 3.75,
+    JPY : 153.28,
+    CAD : 1.38,
+    BHD : 0.38,
+    AED : 3.67,
 }
+console.log(chalk.bold.bgRed("WelCome to Currency Conversion App\n"))
+// create a program to take a user input
 let useranswer = await inquirer.prompt ([
     {
         name : "from",
         message : "Enter Currency From",
         type : "list",
-        Choice : ["USD","PKR","EUR","GBP","INR","SAR","JPY","CAD","BHD","AED",]
+        choices : ["USD","PKR","EUR","GBP","INR","SAR","JPY","CAD","BHD","AED",]
     },
     {
         name : "to",
         message : "Enter Currency to",
         type : "list",
-        Choice : ["USD","PKR","EUR","GBP","INR","SAR","JPY","CAD","BHD","AED",]  
+        choices : ["USD","PKR","EUR","GBP","INR","SAR","JPY","CAD","BHD","AED",]  
     },
     {
         name : "amount",
@@ -33,16 +35,17 @@ let useranswer = await inquirer.prompt ([
         type : "number",
     },
 ]);
-
+// create dynamic variables
 let currencyfrom = currency [useranswer.from];
 let currencyto = currency [useranswer.to];
 let inputamount = useranswer.amount;
+// using dynamic values for conversion
 let convert = inputamount / currencyfrom;
 let total = convert * currencyto;    
+// print amount
+console.log(chalk.bold.bgGreenBright(total));
 
-console.log(total);
+console.log(chalk.blue.bold("\nThanks for Using Our Services"));
 
 
 
-// console.log (chalk.bold.bgYellowBright, answer.from)
-// console.log(chalk.bold.bgBlue,answer.to)

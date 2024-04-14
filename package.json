@@ -1,5 +1,5 @@
 {
-  "name": "@amnakh/1-International-currency-converter",
+  "name":"@amnakh/cli_international_currency_converter",
   "version": "1.0.0",
   "description": "International-Currency_Converter",
   "main": "index.js",
